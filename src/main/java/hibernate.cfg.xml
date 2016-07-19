@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		
+	<property name="hibernate.connection.url">jdbc:mysql://localhost/hibernate_school</property>
+	<property name="hibernate.connection.username">root</property>
+	<property name="hibernate.connection.password">root</property>
+	
+	<property name="connection.pool_size">1</property>
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	
+	<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+	<!-- <property name="hbm2ddl.auto">create</property>//////tambien se puede hacer create que elimina la tabla si existe-->
+		
+		
+		<mapping class="com.softpath.entity.Empleado"/>
+		<mapping class="com.softpath.entity.Desarrollador"/>
+		<mapping class="com.softpath.entity.Administrador"/>
+		<!--<mapping class="com.softpath.ejercicioherencia.School"/>
+		<mapping class="com.softpath.ejercicioherencia.Profesor"/>
+		<mapping class="com.softpath.ejercicioherencia.Alumno"/>
+		<mapping class="com.softpath.ejercicioherencia.Salario"/> -->
+		<!-- <mapping class="com.softpath.entity.Pelicula"/> -->
+	
+	</session-factory>
+</hibernate-configuration>
